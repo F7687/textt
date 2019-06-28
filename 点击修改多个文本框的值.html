@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>点击修改多个文本框的值</title>
+	<meta charset="utf-8">
+</head>
+<body>
+<input type="button" value="点击修改文本框的值" name="" id="btn"><br>
+<input type="text" name=""><br>
+<input type="text" name=""><br>
+<input type="text" name=""><br>
+<input type="text" name=""><br>
+<input type="text" name=""><br>
+<input type="text" name=""><br>
+
+
+<script type="text/javascript">
+	document.getElementById("btn").onclick=function(){
+		var inputs=document.getElementsByTagName("input");
+		for(var i=0;i<inputs.length;i++){
+			console.log(inputs[i].type);
+			if(inputs[i].type=='button'){
+				continue;
+			}
+			inputs[i].value="helloworld";
+		}
+	}
+</script>
+</body>
+</html>
